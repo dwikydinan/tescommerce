@@ -165,7 +165,7 @@ Widget buildLoginBtn(){
   );
 }
 
-class _LoginPageState extends State<loginpages> {
+class _LoginPageState extends State<loginpage> {
   
 bool isRememberMe = false;
 

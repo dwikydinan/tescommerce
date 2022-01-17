@@ -25,6 +25,99 @@ class AppData {
         isliked: false,
         image: 'assets/shoe_tilt_shoe_3.png',
         category: "Trending Now"),
+    Product(
+        id: 4,
+        name: 'Nike Air Max 92607',
+        price: 800.00,
+        isliked: false,
+        image: 'assets/shoe_tilt_shoe_3.png',
+        category: "Trending Now"),
+  
+    Product(
+        id: 5,
+        name: 'Nike Air Max 92607',
+        price: 800.00,
+        isliked: false,
+        image: 'assets/shoe_tilt_shoe_3.png',
+        category: "Trending Now"),
+    
+    Product(
+        id: 6,
+        name: 'Nike Air Max 92607',
+        price: 800.00,
+        isliked: false,
+        image: 'assets/shoe_tilt_shoe_3.png',
+        category: "Trending Now"),
+    Product(
+        id: 7,
+        name: 'Nike Air Max 92607',
+        price: 800.00,
+        isliked: false,
+        image: 'assets/shoe_tilt_shoe_3.png',
+        category: "Trending Now"),
+    Product(
+        id: 8,
+        name: 'Nike Air Max 92607',
+        price: 800.00,
+        isliked: false,
+        image: 'assets/shoe_tilt_shoe_3.png',
+        category: "Trending Now"),
+    Product(
+        id: 9,
+        name: 'Nike Air Max 92607',
+        price: 800.00,
+        isliked: false,
+        image: 'assets/shoe_tilt_shoe_3.png',
+        category: "Trending Now"),
+    Product(
+        id: 10,
+        name: 'Nike Air Max 92607',
+        price: 800.00,
+        isliked: false,
+        image: 'assets/shoe_tilt_shoe_3.png',
+        category: "Trending Now"),
+    Product(
+        id: 11,
+        name: 'Nike Air Max 92607',
+        price: 800.00,
+        isliked: false,
+        image: 'assets/shoe_tilt_shoe_3.png',
+        category: "Trending Now"),
+    Product(
+        id: 12,
+        name: 'Nike Air Max 92607',
+        price: 800.00,
+        isliked: false,
+        image: 'assets/shoe_tilt_shoe_3.png',
+        category: "Trending Now"),
+    Product(
+        id: 13,
+        name: 'Nike Air Max 92607',
+        price: 800.00,
+        isliked: false,
+        image: 'assets/shoe_tilt_shoe_3.png',
+        category: "Trending Now"),
+    Product(
+        id: 14,
+        name: 'Nike Air Max 92607',
+        price: 800.00,
+        isliked: false,
+        image: 'assets/shoe_tilt_shoe_3.png',
+        category: "Trending Now"),
+    Product(
+        id: 15,
+        name: 'Nike Air Max 92607',
+        price: 800.00,
+        isliked: false,
+        image: 'assets/shoe_tilt_shoe_3.png',
+        category: "Trending Now"),
+    Product(
+        id: 16,
+        name: 'Nike Air Max 92607',
+        price: 800.00,
+        isliked: false,
+        image: 'assets/shoe_tilt_shoe_3.png',
+        category: "Trending Now"),
   ];
   static List<Product> cartList = [
     Product(
@@ -57,6 +150,14 @@ class AppData {
         isliked: false,
         image: 'assets/small_tilt_shoe_1.png',
         category: "Trending Now"),
+     Product(
+        id: 2,
+        name: 'Nike Air Max 200',
+        price: 999.00,
+        isSelected: true,
+        isliked: false,
+        image: 'assets/small_tilt_shoe_1.png',
+        category: "Trending Now"),
     // Product(
     //     id:1,
     //     name: 'Nike Air Max 97',
@@ -72,9 +173,9 @@ class AppData {
         name: "Sneakers",
         image: 'assets/shoe_thumb_2.png',
         isSelected: true),
-    Category(id: 2, name: "Jacket", image: 'assets/jacket.png'),
-    Category(id: 3, name: "Accessories", image: 'assets/watch.png'),
-    Category(id: 4, name: "Kids", image: 'assets/watch.png'),
+    Category(id: 2, name: "Jacket", image: 'assets/jacket.png',isSelected: null),
+    Category(id: 3, name: "Accessories", image: 'assets/watch.png',isSelected: null),
+    Category(id: 4, name: "Kids", image: 'assets/watch.png',isSelected: null),
   ];
   static List<String> showThumbnailList = [
     "assets/shoe_thumb_5.png",
