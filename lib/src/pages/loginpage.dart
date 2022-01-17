@@ -12,112 +12,81 @@ import 'package:flutter_ecommerce_app/src/widgets/extentions.dart';
 import 'package:http/http.dart' as http;
 
 class loginpages extends StatefulWidget {
-
   @override
   _LoginPageState createState() => _LoginPageState();
-  
-  Widget buildEmail() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Text('Email',
+}
+
+Widget buildEmail() {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: <Widget>[
+      Text(
+        'Email',
         style: TextStyle(
-          color: Colors.white,
-          fontSize: 16,
-          fontWeight: FontWeight.bold
-        ),
-        ),
-        SizedBox(height: 10),
-        Container(
-          alignment: Alignment.centerLeft,
-          decoration: BoxDecoration(
+            color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+      ),
+      SizedBox(height: 10),
+      Container(
+        alignment: Alignment.centerLeft,
+        decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
             boxShadow: [
               BoxShadow(
-                color: Colors.black26,
-                blurRadius: 6,
-                offset: Offset(0,2)
-              )
-            ]
-          ),
-          height: 60,
-          child: TextField(
-            keyboardType: TextInputType.emailAddress,
-            style: TextStyle(
-              color: Colors.black87
-            ),
-            decoration: InputDecoration(
+                  color: Colors.black26, blurRadius: 6, offset: Offset(0, 2))
+            ]),
+        height: 60,
+        child: TextField(
+          keyboardType: TextInputType.emailAddress,
+          style: TextStyle(color: Colors.black87),
+          decoration: InputDecoration(
               border: InputBorder.none,
               contentPadding: EdgeInsets.only(top: 14),
-              prefixIcon: Icon(Icons.email,
-              color: Color(0xff2890c8)
-              ),
+              prefixIcon: Icon(Icons.email, color: Color(0xff2890c8)),
               hintText: 'Email',
-              hintStyle: TextStyle(
-                color: Colors.black38
-                
-              )
-            ),
-          ),
-        )
-      ],
-    );
-  }
+              hintStyle: TextStyle(color: Colors.black38)),
+        ),
+      )
+    ],
+  );
 }
 
 Widget buildPassword() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Text('Password',
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: <Widget>[
+      Text(
+        'Password',
         style: TextStyle(
-          color: Colors.white,
-          fontSize: 16,
-          fontWeight: FontWeight.bold
-        ),
-        ),
-        SizedBox(height: 10),
-        Container(
-          alignment: Alignment.centerLeft,
-          decoration: BoxDecoration(
+            color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+      ),
+      SizedBox(height: 10),
+      Container(
+        alignment: Alignment.centerLeft,
+        decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
             boxShadow: [
               BoxShadow(
-                color: Colors.black26,
-                blurRadius: 6,
-                offset: Offset(0,2)
-              )
-            ]
-          ),
-          height: 60,
-          child: TextField(
-           obscureText: true,
-            style: TextStyle(
-              color: Colors.black87
-            ),
-            decoration: InputDecoration(
+                  color: Colors.black26, blurRadius: 6, offset: Offset(0, 2))
+            ]),
+        height: 60,
+        child: TextField(
+          obscureText: true,
+          style: TextStyle(color: Colors.black87),
+          decoration: InputDecoration(
               border: InputBorder.none,
               contentPadding: EdgeInsets.only(top: 14),
-              prefixIcon: Icon(
-                Icons.lock,
-              color: Color(0xff2890c8)
-              ),
+              prefixIcon: Icon(Icons.lock, color: Color(0xff2890c8)),
               hintText: 'Password',
-              hintStyle: TextStyle(
-                color: Colors.black38
-                
-              )
-            ),
-          ),
-        )
-      ],
-    );
-  }
+              hintStyle: TextStyle(color: Colors.black38)),
+        ),
+      )
+    ],
+  );
 }
 
-Widget buildForgotPassBtn(){
+Widget buildForgotPassBtn() {
   return Container(
     alignment: Alignment.centerRight,
     child: FlatButton(
@@ -125,101 +94,99 @@ Widget buildForgotPassBtn(){
       padding: EdgeInsets.only(right: 0),
       child: Text(
         'Forgot Password?',
-        style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold ),
+        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
       ),
     ),
   );
 }
 
-Widget buildRememberCb(){
+Widget buildRememberCb() {
   return Container(
     height: 20,
     child: Row(
-    child: <Widget>[
-      Theme(data: ThemeData(unselectedWidgetColor: Colors.white), 
-      child: Checkbox(value: isRememberMe,
-      checkColor: Colors.blue,
-      activeColor: Colors.white,
-      onChanged: (value) {
-        setState(() { isRememberMe = value;
-        });
-      },
-      )
-      ),
-      Text('Remember Me', style: TextStyle(color: Colors.white,
-      fontWeight: FontWeight.bold
-      ),
-      )
-    ],
+      children: <Widget>[
+        Theme(
+            data: ThemeData(unselectedWidgetColor: Colors.white),
+            child: Checkbox(
+              value: isRememberMe,
+              checkColor: Colors.blue,
+              activeColor: Colors.white,
+              onChanged: (value) {
+                setState(() {
+                  isRememberMe = value;
+                });
+              },
+            )),
+        Text(
+          'Remember Me',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        )
+      ],
     ),
   );
 }
 
-Widget buildLoginBtn(){
+Widget buildLoginBtn() {
   return Container(
     padding: EdgeInsets.symmetric(vertical: 25),
     width: double.infinity,
-    child: ElevatedButton(onPressed: () => MyHomePage(), child: null,),
+    child: ElevatedButton(
+      onPressed: () => MyHomePage(),
+      child: null,
+    ),
   );
 }
 
-class _LoginPageState extends State<loginpage> {
-  
-bool isRememberMe = false;
+class _LoginPageState extends State<loginpages> {
+  bool isRememberMe = false;
 
-  @override 
-  Widget build(BuildContext context){
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.light,
         child: GestureDetector(
-          child: Stack(children: <Widget> [
-            Container(
-              height: double.infinity,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Color(0xff2890c8),
-                    Color(0xff5c3dff),
-                  ]
-                  )
-              ),
-            child: SingleChildScrollView(
-              physics: AlwaysScrollableScrollPhysics(),
-              padding: EdgeInsets.symmetric(
-              horizontal: 25, 
-              vertical: 120
-              ),
-              child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text('Sign In',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold
+          child: Stack(
+            children: <Widget>[
+              Container(
+                height: double.infinity,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                      Color(0xff2890c8),
+                      Color(0xff5c3dff),
+                    ])),
+                child: SingleChildScrollView(
+                  physics: AlwaysScrollableScrollPhysics(),
+                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 120),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'Sign In',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(height: 50),
+                      buildEmail(),
+                      SizedBox(height: 20),
+                      buildPassword(),
+                      buildForgotPassBtn(),
+                      buildRememberCb(),
+                      buildLoginBtn()
+                    ],
+                  ),
                 ),
-                ),
-              SizedBox(height: 50),
-              buildEmail(),
-              SizedBox(height: 20),
-              buildPassword(),
-              buildForgotPassBtn(),
-              buildRememberCb(),
-              buildLoginBtn()
-              ],
-            ),
-            ),
-            )
-          ],
+              )
+            ],
           ),
         ),
-        ),
+      ),
     );
   }
 }
